@@ -2,7 +2,6 @@ import { useModal } from "../../../hooks/useModal";
 
 export default function TasksActions() {
   const { setIsAdd } = useModal();
-  console.log(setIsAdd);
   const handleAddTask = () => {
     setIsAdd(true);
   };

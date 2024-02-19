@@ -1,5 +1,15 @@
 export default function TasksList({ task }) {
   const { title, description, tags, id, priority } = task;
+
+  function getRandomColor() {
+    // Generate random values for RGB channels
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    // Combine values into a CSS color string
+    return `rgb(${r}, ${g}, ${b})`;
+  }
+
   return (
     <tr className="border-b border-[#2E3443] [&>td]:align-baseline [&>td]:px-4 [&>td]:py-2">
       <td>
@@ -27,7 +37,10 @@ export default function TasksList({ task }) {
         <ul className="flex justify-center gap-1.5 flex-wrap">
           {tags.map((tag) => (
             <li key={tag}>
-              <span className="inline-block h-5 whitespace-nowrap rounded-[45px] bg-[#00D991A1] px-2.5 text-sm capitalize text-[#F4F5F6]">
+              <span
+                className="inline-block h-5 whitespace-nowrap rounded-[45px] px-2.5 text-sm capitalize text-[#F4F5F6]"
+                style={{ backgroundColor: getRandomColor() }}
+              >
                 {tag}
               </span>
             </li>

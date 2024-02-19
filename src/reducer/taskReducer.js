@@ -3,10 +3,6 @@
         case "ADD_TASK":
             return[...state, action.payload]
             break;
-        case "EDIT_TASK":
-            return{
-                
-            }
         default:
             return state;    
     }

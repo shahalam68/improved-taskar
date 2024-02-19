@@ -1,3 +1,4 @@
+import { ToastContainer } from "react-toastify";
 import TasksSections from "./components/Tasks/TasksSections";
 import Hero from "./components/shared/Hero";
 import NavBar from "./components/shared/NavBar";
@@ -9,6 +10,7 @@ export default function App() {
       <Hero></Hero>
       <TasksProvider>
         <TasksSections />
+        <ToastContainer />
       </TasksProvider>
     </>
   );

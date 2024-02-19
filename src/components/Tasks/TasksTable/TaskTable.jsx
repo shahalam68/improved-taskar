@@ -14,28 +14,23 @@ export default function TasksTable() {
         <tr>
           <th className="p-4 pb-8 text-sm font-semibold capitalize w-[48px]"></th>
           <th className="p-4 pb-8 text-sm font-semibold capitalize w-[300px]">
-            {" "}
-            Title{" "}
+            Title
           </th>
           <th className="p-4 pb-8 text-sm font-semibold capitalize w-full">
             Description
           </th>
           <th className="p-4 pb-8 text-sm font-semibold capitalize md:w-[350px]">
-            {" "}
-            Tags{" "}
+            Tags
           </th>
           <th className="p-4 pb-8 text-sm font-semibold capitalize md:w-[100px]">
-            {" "}
-            Priority{" "}
+            Priority
           </th>
           <th className="p-4 pb-8 text-sm font-semibold capitalize md:w-[100px]">
-            {" "}
-            Options{" "}
+            Options
           </th>
         </tr>
       </thead>
       <tbody>
-        {" "}
         {searchText.trim() === "" ? (
           // Render all tasks when search text is empty
           tasks.map((task) => <TasksList key={task.id} task={task} />)
@@ -46,7 +41,7 @@ export default function TasksTable() {
           // Render no results found message if search returned empty
           <tr>
             <td colSpan="6" className="text-center font-semibold text-xl">
-              No tasks found for{" "}
+              No tasks found for
               <span className="text-[#00D991A1]">{searchText}</span>
             </td>
           </tr>
